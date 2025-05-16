@@ -1,7 +1,7 @@
-import { Schema, model, Document } from 'mongoose';
+import { Schema, model, Document, Types } from 'mongoose';
 
 export interface ILoan extends Document {
-  userId: string;
+  userId: Types.ObjectId;    // <-- change here
   loanOfficer: string;
   amount: number;
   dateApplied: Date;
